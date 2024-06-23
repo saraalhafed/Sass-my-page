@@ -1,0 +1,14 @@
+@mixin btn ($bg, $color){
+     background-color: $bg;  /* sthis proporeties will be change in bae */
+     color:$color ;
+     font-size: $larg-font;
+     font-weight:$medium-font;
+     margin: $base-margin;
+     padding:$base-padding ;
+     border-radius:$border-radius ;
+}
+@mixin trans ($property, $time, $move){
+    transition-property: $property ;
+    transition-duration: $time;
+    transition-timing-function: $move;
+}

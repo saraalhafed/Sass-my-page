@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(195, 195, 190);
+}
+img {display:block;
+     width: 100%;
+}
+.card{
+   padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     &__image{
+        width: 200px;
+          &-img{
+            border-radius: 50%;
+            box-shadow: $box-shadow;
+          }}
+          p{
+          color: $primary-color;
+          font-weight:$font-bold ;
+          font-size: $larg-font;
+          }
+          &__links{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            a{
+              color: $tertiary-color;
+              text-decoration: none;
+              font-size: $link-font;
+              background-color: $link-background;
+              width: 80%;
+              border-radius: $border-radius;
+              margin: $base-margin;
+              padding: $base-padding;
+              @include trans(color, 0.5s, ease-in);
+              &:hover {
+                color: $secondary-color;
+              }
+            }
+          }
+          &__buttons{
+            display: flex;
+           &-btn-1{
+            @include btn (orange, white);
+            @include trans (background-color, 0.3s, ease-out);
+            &:hover{
+              @include btn (rgb(73, 57, 250) ,white);
+            }
+           }
+           &-btn-2{
+             @include btn (orange, rgb(22, 21, 21));
+             @include trans (background-color, 0.3s, ease-out);
+             &:hover{
+              @include btn (rgb(81, 78, 116), white);
+            }
+           }
+          }
+     }
